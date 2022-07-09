@@ -17,7 +17,8 @@ body{
     max-width: 900px;
     margin: 0 auto;
     display: flex;
-    justify-content: center;
+    /*justify-content: center;*/
+    justify-content: space-between;
 }
 
 .card{
@@ -30,4 +31,33 @@ body{
 
 .card img{
     max-width: 100%;
+}
+ /*transform*/
+
+.container .card:hover{
+    /*transform: rotate(20deg);*/
+    /*transition: transform 1s ease-out;*/
+    animation-name: animate-card-exemple;
+    animation-duration: 1s;
+    animation-iteration-count: 3;
+    cursor: pointer;
+}
+
+@keyframes animate-card-exemple {
+    0%{
+       /* transform: rotate(0deg) translateX(0px);*/
+        transform: rotate(0deg) translateX(0px) scale(1, 1);
+    }
+    25%{
+        /*transform: rotate(-10deg) translateX(-50px);*/
+        transform: rotate(-20deg) translateX(-10px) scale(1.2, 1.2);
+    }
+    75%{
+        /*transform: rotate(10deg) translateX(50px);*/
+        transform: rotate(20deg)translateX(10px) scale(1.2, 1.2);
+    }
+    100%{
+        /*transform: rotate(0deg) translateX(0px);*/
+        transform: rotate(0deg) translateX(0px) scale(1, 1);
+    }
 }
